@@ -5,7 +5,7 @@ const sc = new ScratchCard('js--sc--container', {
     containerWidth: scContainer.offsetWidth,
     containerHeight: 300,
     imageForwardSrc: '/peterCrown.png',
-    imageBackgroundSrc: 'ScratchCover.png',
+    imageBackgroundSrc: '/ScratchCover.png',
     clearZoneRadius: 30,
     nPoints: 0,
     pointSize: 0,

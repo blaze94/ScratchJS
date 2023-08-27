@@ -1,22 +1,23 @@
 const scContainer = document.getElementById('js--sc--container');
 
-const sc = new ScratchCard('js--sc--container', {
-    scratchType: SCRATCH_TYPE.LINE,
-    containerWidth: scContainer.offsetWidth,
-    containerHeight: 300,
-    imageForwardSrc: '/peterCrown.png',
-    imageBackgroundSrc: '/ScratchCover.png',
-    clearZoneRadius: 30,
-    nPoints: 0,
-    pointSize: 0,
+const sc = new ScratchCard('#js--sc--container', {
+  scratchType: SCRATCH_TYPE.CIRCLE,
+  containerWidth: scContainer.offsetWidth,
+  containerHeight: 300,
+  imageForwardSrc: '/peterCrown300.png',
+  imageBackgroundSrc: '/ScratchCover300.png',
+  // htmlBackground: '<div class="inner_html"><p>Subscribe for more Videos</p></div>',
+  clearZoneRadius: 30,
+  nPoints:50,
+  pointSize: 4,
 })
 
 sc.init().then(() => {
-    sc.canvas.addEventListener('scratch.move', () => {
-        let percent = sc.getPercent().toFixed(0);
-        scInfos.innerHTML = percent + '%';
-        console.log(percent)
-    })
+  sc.canvas.addEventListener('scratch.move', () => {
+    let percent = sc.getPercent().toFixed(0);
+    scInfos.innerHTML = percent + '%';
+    console.log(percent)
+  })
 }).catch((error) => {
-    alert(error.message);
+  alert(error.message);
 });
